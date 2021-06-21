@@ -19,7 +19,7 @@ die;
 function retrive_database_users()
 {
     $con = connectDatabase();
-    if(!$con) {
+    if (!$con) {
         return "Can not connect to database";
     }
     $sql = "SELECT * FROM users";
@@ -38,11 +38,11 @@ function retrive_redis_users()
     $redis->connect(REDIS_HOST, REDIS_PORT);
     $allKeys = $redis->keys('*');
     $allUsersData = [];
-    foreach($allKeys as $singleKeys) {
+    foreach ($allKeys as $singleKeys) {
         $singleUserData = json_decode($redis->get($singleKeys));
         $userId = str_replace('user_object_', '', $singleKeys);
-        $allUsersData[]=[
-            'userId'=>$userId,
+        $allUsersData[] = [
+            'userId' => $userId,
             'useremail' => $singleUserData->useremail,
             'username' => $singleUserData->username
         ];
