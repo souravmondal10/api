@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php
 
 MAINTAINER Sourav Mondal "souravmondal10@gmail.com"
 
@@ -18,4 +18,6 @@ RUN pecl install -o -f redis \
 &&  rm -rf /tmp/pear \
 &&  docker-php-ext-enable redis
 
-COPY ./config.php ./config.php
+COPY . .
+
+CMD ['php', '-S', '0.0.0.0:80']
