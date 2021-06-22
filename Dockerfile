@@ -20,4 +20,4 @@ RUN pecl install -o -f redis \
 
 COPY . .
 
-CMD ['php', '-S', '0.0.0.0:80']
+CMD ['php', '-S', '0.0.0.0:8081']
