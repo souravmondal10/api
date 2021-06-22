@@ -1,4 +1,4 @@
-mv config_sample.php config.php
+mv config-sample.php config.php
 
 sed -i "s/redis_host_xxx/$REDIS_HOST/g" config.php
 sed -i "s/mysql_host_xxx/$MYSQL_HOST/g" config.php
