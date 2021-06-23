@@ -5,7 +5,7 @@ services:
   - docker
 
 script:
-  - sh echo $REDIS_HOST
+  - echo $REDIS_HOST
   - sh ./generate_config_files.sh
   - docker build -t souravmondal10/api .
 
