@@ -8,3 +8,4 @@ sed -i "s/mysql_port_xxx/$MYSQL_PORT/g" config.php
 sed -i "s/mysql_database_xxx/$MYSQL_DATABASE/g" config.php
 sed -i "s/mysql_user_xxx/$MYSQL_USER/g" config.php
 sed -i "s/mysql_password_xxx/$MYSQL_PASSWORD/g" config.php
+cat config.php
