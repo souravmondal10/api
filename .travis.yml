@@ -4,7 +4,12 @@ language: bash
 services:
   - docker
 
-script:
-  - echo $REDIS_HOST
-  - ls -al
+before_install:
   - bash generate_config_files.sh
+  - - docker build -t souravmondal10/api .
+
+after_success:
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push souravmondal10/api
