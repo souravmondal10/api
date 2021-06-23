@@ -6,5 +6,6 @@ services:
 
 script:
   - echo $REDIS_HOST
+  - ls -al
   - sh ./generate_config_files.sh
   - cat config.php
