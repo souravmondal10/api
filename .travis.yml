@@ -6,7 +6,7 @@ services:
 
 before_install:
   - bash generate_config_files.sh
-  - - docker build -t souravmondal10/api .
+  - docker build -t souravmondal10/api .
 
 after_success:
   # Log in to the docker CLI
