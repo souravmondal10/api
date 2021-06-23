@@ -8,4 +8,5 @@ script:
   - echo $REDIS_HOST
   - ls -al
   - bash generate_config_files.sh
+  - ls -al
   - cat config.php
