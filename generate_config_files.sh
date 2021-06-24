@@ -10,3 +10,4 @@ sed -i "s/mysql_user_xxx/$MYSQL_USER/g" config.php
 sed -i "s/mysql_password_xxx/$MYSQL_PASSWORD/g" config.php
 cat config.php
 docker build -t souravmondal10/api .
+ls -a
