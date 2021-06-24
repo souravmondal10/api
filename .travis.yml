@@ -8,9 +8,6 @@ services:
 before_install:
   - bash generate_config_files.sh
 
-before_script:
-  - docker build -t souravmondal10/api .
-
 after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
