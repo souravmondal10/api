@@ -5,9 +5,10 @@ services:
   - docker
 
 
-script:
+before_install:
   - bash generate_config_files.sh
-after_script:
+
+before_script:
   - docker build -t souravmondal10/api .
 
 after_success:
